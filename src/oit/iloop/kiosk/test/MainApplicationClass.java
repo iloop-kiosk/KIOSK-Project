@@ -3,6 +3,8 @@ package oit.iloop.kiosk.test;
 import java.io.IOException;
 import java.net.URL;
 
+import oit.iloop.kiosk.kiosk_toppage.TopPageParent;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,18 +18,12 @@ public class MainApplicationClass extends Application{
 		// TODO Auto-generated method stub
 		
 		
-		URL location = getClass().getClassLoader().getResource("mainlayout/kiosk_main_layout.fxml");
-		FXMLLoader fxmlLoader = new FXMLLoader(location);
-		
-		
-		
-		
-		Parent root = (Parent)fxmlLoader.load();
 
-		MainApplicationController maController = fxmlLoader.getController();
-		Scene scene = new Scene(root);
 		
-		primaryStage.setFullScreen(false);
+	
+		Scene scene = new Scene(new TopPageParent());
+		
+		primaryStage.setFullScreen(true);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
