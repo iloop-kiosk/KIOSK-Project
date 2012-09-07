@@ -1,22 +1,33 @@
 package oit.iloop.kiosk.test;
 
-import oit.iloop.kiosk.kiosk_main.KioskMainParent;
+import java.io.IOException;
+import java.net.URL;
+
 import javafx.application.Application;
-import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class MainApplicationClass extends Application{
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage primaryStage) throws IOException {
 		// TODO Auto-generated method stub
-		Scene scene = new Scene(new KioskMainParent());
 		
 		
-		primaryStage.setFullScreen(true);
+		URL location = getClass().getClassLoader().getResource("mainlayout/kiosk_main_layout.fxml");
+		FXMLLoader fxmlLoader = new FXMLLoader(location);
+		
+		
+		
+		
+		Parent root = (Parent)fxmlLoader.load();
+
+		MainApplicationController maController = fxmlLoader.getController();
+		Scene scene = new Scene(root);
+		
+		primaryStage.setFullScreen(false);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
