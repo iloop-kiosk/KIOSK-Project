@@ -22,6 +22,7 @@ public class TopPageFXMLController implements Initializable {
 			// TODO Auto-generated method stub
 			if(event.getEventType().equals(MouseEvent.MOUSE_CLICKED)){
 				System.out.println("クリック");
+				
 			}
 			
 		}
