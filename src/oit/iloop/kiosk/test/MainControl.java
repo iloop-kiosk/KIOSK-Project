@@ -40,8 +40,61 @@ public class MainControl implements Initializable {
         popupStage.show();    
 		//popup.show(primaryStage);
 	}
+	@FXML
+	private void bottun02(MouseEvent event) {
+		
+		popup.show(primaryStage);
+	}
+	@FXML
+	private void bottun03(MouseEvent event) {
+		
+		popup.show(primaryStage);
+	}
+	@FXML
+	private void bottun04(MouseEvent event) {
 	
-
+		popup.show(primaryStage);
+	}
+	@FXML
+	private void bottun05(MouseEvent event) {
+	
+		popup.show(primaryStage);
+	}
+	@FXML
+	private void bottun06(MouseEvent event) {
+		
+		popup.show(primaryStage);
+	}
+	@FXML
+	private void bottun07(MouseEvent event) {
+	
+		popup.show(primaryStage);
+	}
+	@FXML
+	private void bottun08(MouseEvent event) {
+	
+		popup.show(primaryStage);
+	}
+	@FXML
+	private void bottun09(MouseEvent event) {
+		
+		popup.show(primaryStage);
+	}
+	@FXML
+	private void bottun10(MouseEvent event) {
+		
+		popup.show(primaryStage);
+	}
+	@FXML
+	private void bottun11(MouseEvent event) {
+		
+		popup.show(primaryStage);
+	}
+	@FXML
+	private void bottun12(MouseEvent event) {
+		
+		popup.show(primaryStage);
+	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
