@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="oit.iloop.kiosk.test.MainControl">
+  <children>
+    <Button fx:id="button01" layoutX="46.0" layoutY="136.0" mnemonicParsing="false" onMouseClicked="#bottun01" prefHeight="50.0" prefWidth="77.0" text="11月01日" />
+    <Button fx:id="button02" layoutX="189.0" layoutY="136.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" text="11月０２日" />
+    <Button fx:id="button03" layoutX="329.0" layoutY="136.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" text="11月02日" />
+    <Button fx:id="button04" layoutX="458.0" layoutY="136.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" text="11月03日" />
+    <Button fx:id="button05" layoutX="46.0" layoutY="226.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" text="11月04日" />
+    <Button fx:id="button06" layoutX="189.0" layoutY="226.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" text="11月05日" />
+    <Button fx:id="button07" layoutX="329.0" layoutY="226.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" text="11月06日" />
+    <Button fx:id="button08" layoutX="458.0" layoutY="226.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" text="11月07日" />
+    <Button fx:id="button09" layoutX="46.0" layoutY="311.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" text="11月０８日" />
+    <Button fx:id="button10" layoutX="189.0" layoutY="311.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" text="11月09日" />
+    <Button fx:id="button11" layoutX="329.0" layoutY="311.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" text="11月10日" />
+    <Button fx:id="button12" layoutX="458.0" layoutY="311.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="77.0" text="11月１１日" />
+  </children>
+</AnchorPane>

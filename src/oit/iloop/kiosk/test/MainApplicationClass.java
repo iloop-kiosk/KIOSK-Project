@@ -1,20 +1,41 @@
 package oit.iloop.kiosk.test;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class MainApplicationClass extends Application{
+    @Override
+    public void start(Stage stage) throws Exception {
+    	
+    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("test.fxml"));
+    	Parent root = (Parent)fxmlLoader.load();
+        Scene scene = new Scene(root);
+        
+        MainControl mc = (MainControl)fxmlLoader.getController();
+        mc.setStage(stage);
+        
+        
+        stage.setScene(scene);
+        stage.setFullScreen(false); // フルスクーリーンを無効化
+        stage.setResizable(false);  // リサイズを無効化
+        stage.show();    
+    }
+    
+    public static void main(String[] args) {
+    	launch();
+    }
+	/*
 	String[] resPaths = {"./path3123.png","./path3125.png","./path3127.png","./path3129.png","./rect2972.png"};
 	PictClass1[] pict = new PictClass1[resPaths.length];
 	ShowImageIndicator siIndicator = new ShowImageIndicator(resPaths.length);
 	
 	
 	@Override
-	public void start(final Stage primaryStage) throws Exception {
+	public void start(Stage stage) throws Exception {
+		/*
 		// TODO Auto-generated method stub
 		for(int i = 0 ;i < resPaths.length;i++){
 			pict[i] = new PictClass1(resPaths[i]);
@@ -37,7 +58,7 @@ public class MainApplicationClass extends Application{
 					primaryStage.setWidth(pict[siIndicator.getIndicator()].getImageWidth());
 					primaryStage.setHeight(pict[siIndicator.getIndicator()].getImageHeight());
 					
-					
+				
 					
 					
 					
@@ -46,20 +67,18 @@ public class MainApplicationClass extends Application{
 			
 			
 		});
-		primaryStage.setScene(scene);
-		primaryStage.centerOnScreen();
-		primaryStage.setTitle("画像表示");
-		primaryStage.setResizable(false);
-		primaryStage.show();
 		
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("test.fxml"));
+    	Parent root = (Parent)fxmlLoader.load();
+        Scene scene = new Scene(root);
+        MainControl mc = (MainControl)fxmlLoader.getController();
+        mc.setStage(stage);
+        stage.setScene(scene);
+        stage.setFullScreen(false); // フルスクーリーンを無効化
+        stage.setResizable(false);  // リサイズを無効化
+        stage.show();    
 		
-		
-		
-		
-		
-		
-		
-		
+	
 		
 	}
 	
@@ -100,7 +119,7 @@ public class MainApplicationClass extends Application{
 		
 	}
 	
-	
+	*/
 	
 
 }
