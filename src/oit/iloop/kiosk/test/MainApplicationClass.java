@@ -1,42 +1,50 @@
 package oit.iloop.kiosk.test;
 
-
 import java.io.IOException;
+import java.net.URL;
+
+import oit.iloop.kiosk.kiosk_main.KioskMainParent;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class MainApplicationClass extends Application{
 
-    @Override
-    public void start(Stage stage){
-    	
-    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("test.fxml"));
-    	Parent root;
-		try {
-			root = (Parent)fxmlLoader.load();
-	        
-	        MainControl mc = (MainControl)fxmlLoader.getController();
-	        mc.setStage(stage);
-
-	        Scene scene = new Scene(root);
-
-	        stage.setScene(scene);
-	        
-	        stage.setFullScreen(false); // フルスクーリーンを無効化
-	        stage.setResizable(false);  // リサイズを無効化
-	        stage.show();    
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-    }
-    
-    public static void main(String[] args) {
-    	launch();
-    }
+	@Override
+	public void start(Stage primaryStage) throws IOException {
+		// TODO Auto-generated method stub
+		
+		
+		AnchorPane aP = new AnchorPane();
+		aP.getChildren().add(new TextArea("aaaaaaaaaaaaaaaaaa"));
+		aP.getChildren().add(new Button("yheaaaaaa"));
+		
+		
+		
+		Scene scene = new Scene(new KioskMainParent());
+		//Scene scene = new Scene(aP);	
+		primaryStage.setFullScreen(true);
+		primaryStage.setScene(scene);
+		primaryStage.show();
+		
+		
+		
+		
+		
+	}
+	
+	public static void main(String[] args){
+		launch(args);
+	}
+	
+	
+	
+	
+	
 }
