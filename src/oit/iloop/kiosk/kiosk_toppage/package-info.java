@@ -5,4 +5,4 @@
  * @author katoumasanori
  *
  */
-package oit.iloop.kiosk.kiosk_examination;
+package oit.iloop.kiosk.kiosk_toppage;
