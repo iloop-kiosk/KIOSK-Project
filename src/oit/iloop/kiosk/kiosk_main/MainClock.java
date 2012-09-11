@@ -16,7 +16,7 @@ import javafx.scene.text.Font;
 import javafx.util.Duration;
 
 public class MainClock extends AnchorPane {
-	
+
 	Calendar currentTime = Calendar.getInstance();
 	SimpleDateFormat formatDate = new SimpleDateFormat("MM/dd (EEE)",
 			Locale.JAPANESE);
@@ -27,26 +27,15 @@ public class MainClock extends AnchorPane {
 	VBox container = new VBox();
 
 	String style = "";
-	AnchorPane mainClockRoot  = new AnchorPane();	
-	
-	
-	
-	
-	
-	
-	
+	AnchorPane mainClockRoot = new AnchorPane();
+
 	public MainClock(double width, double height) {
-		
-		
-		
-		setStyle(style);	
-		
-		dateLabel.setFont(new Font("SansSerif",20));
-		timeLabel.setFont(new Font("SansSerif",30));
-		
-		
-		
-		
+
+		setStyle(style);
+
+		dateLabel.setFont(new Font("SansSerif", 20));
+		timeLabel.setFont(new Font("SansSerif", 30));
+
 		refreshClock();
 		container.setPrefHeight(height);
 		container.setPrefWidth(width);
