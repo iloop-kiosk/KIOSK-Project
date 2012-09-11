@@ -1,0 +1,36 @@
+.background {
+/*	-fx-opacity: 1;*/
+   /* -fx-background-image: url("7.jpg"); */
+    -fx-background-repeat: repeat;
+}
+
+.left_background {
+	-fx-background-color: mistyrose;
+	-fx-border-color: black;
+	-fx-border-style: solid;
+}
+
+.right_background {
+	-fx-opacity: 1;
+	-fx-background-color: seashell;
+	-fx-border-color: black;
+	-fx-border-style: solid;
+}
+
+.day_label {
+	-fx-background-color: mistyrose;
+	-fx-border-color: black;
+	-fx-border-style: solid;
+}
+
+/*
+.left_arrow:hover {
+	--fx-opacity:0.8;
+}
+*/
+
+.mainGridPane {
+	-fx-background-color: gainsboro;
+	-fx-border-color: black;
+	-fx-border-style: solid;
+}

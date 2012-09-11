@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="main_pane" prefHeight="1024.0" prefWidth="1280.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="kiosk.testpage.PopupWindowController">
+  <children>
+    <GridPane layoutX="159.0" layoutY="128.0" prefHeight="768.0" prefWidth="1024.0" styleClass="mainGridPane">
+      <children>
+        <AnchorPane fx:id="top_pane" minHeight="55.0" prefHeight="55.0" prefWidth="1023.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <children>
+            <Button fx:id="button" layoutX="50.0" layoutY="25.0" onAction="#handle1ButtonAction" text="Click Me!" />
+            <Label fx:id="label" layoutX="145.0" layoutY="27.0" minHeight="16.0" minWidth="69.0" />
+            <Label id="" fx:id="day_label" alignment="CENTER" layoutX="458.0" layoutY="18.0" prefHeight="33.0" prefWidth="108.0" styleClass="day_label, ">
+              <font>
+                <Font name="MS Gothic" size="24.0" />
+              </font>
+            </Label>
+            <ImageView fx:id="right_arrow" fitHeight="38.25" fitWidth="20.0" layoutX="571.0" layoutY="22.0" onMouseClicked="#clickRightArrowButton" pickOnBounds="true" preserveRatio="true" styleClass="right_arrow">
+              <image>
+                <Image url="@right_arrow.png" preserveRatio="false" smooth="false" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="left_arrow" fitHeight="38.25" fitWidth="20.0" layoutX="433.0" layoutY="22.0" onMouseClicked="#clickLeftArrowButton" pickOnBounds="true" preserveRatio="true" styleClass="left_arrow">
+              <image>
+                <Image url="@left_arrow.png" preserveRatio="false" smooth="false" />
+              </image>
+            </ImageView>
+          </children>
+        </AnchorPane>
+        <GridPane fx:id="gridpane2" prefHeight="662.0" prefWidth="995.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+          <children>
+            <AnchorPane prefHeight="696.0" prefWidth="280.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+              <children>
+                <VBox id="" fx:id="left_vbox" alignment="BASELINE_CENTER" layoutX="51.0" prefHeight="627.0" prefWidth="289.0" spacing="15.0" styleClass="left_background" />
+              </children>
+            </AnchorPane>
+            <AnchorPane id="left_pane" prefHeight="696.0" prefWidth="682.9999000000025" GridPane.columnIndex="1" GridPane.rowIndex="0">
+              <children>
+                <Pane id="" fx:id="right_pane" layoutX="46.0" prefHeight="627.0" prefWidth="595.0" styleClass="right_background" />
+              </children>
+            </AnchorPane>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="511.0" minWidth="10.0" prefWidth="340.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="818.0" minWidth="10.0" prefWidth="683.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <ImageView id="" fx:id="close_button" fitHeight="27.749998092651367" fitWidth="36.99999388360766" layoutX="995.0" onMouseClicked="#clickCloseButton" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@close_button.png" preserveRatio="false" smooth="false" />
+              </image>
+            </ImageView>
+          </children>
+        </AnchorPane>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="378.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="378.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="709.0" minHeight="10.0" prefHeight="673.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <stylesheets>
+    <URL value="@PopupWindow.css" />
+  </stylesheets>
+</AnchorPane>
