@@ -3,6 +3,7 @@ package oit.iloop.kiosk.kiosk_main;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import oit.iloop.kiosk.kiosk_examination.TestTableMainParent;
 import oit.iloop.kiosk.kiosk_timetable.TimeTableMainParent;
 
 import javafx.event.EventHandler;
@@ -73,7 +74,7 @@ public class KioskMainController implements Initializable {
 				tab_03.setTextFill(Color.BLACK);
 				tab_04.setTextFill(Color.BLACK);
 				tab_05.setTextFill(Color.BLACK);
-				setMainPane();
+				setMainPane(new TestTableMainParent());
 			}
 		}
 
