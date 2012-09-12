@@ -5,8 +5,9 @@ import java.net.URL;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.layout.Region;
 
-public class TimeTableMainParent extends Parent {
+public class TimeTableMainParent extends Region {
 
 	final static String timeTableFXMLsrc = "timetablelayout/timetable_main_layout.fxml";
 

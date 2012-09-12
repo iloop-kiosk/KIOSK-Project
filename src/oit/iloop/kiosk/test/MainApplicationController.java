@@ -145,7 +145,6 @@ public class MainApplicationController implements Initializable {
 		tab_05.setText("自習室");
 		tab_05.addEventHandler(MouseEvent.ANY, tab05Handler);
 
-		main_pane.getChildren().add(new KioskMainParent());
 		
 		
 		
