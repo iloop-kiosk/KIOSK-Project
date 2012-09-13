@@ -7,7 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.layout.Region;
 
-public class KioskMainParent extends Region {
+public class KioskMain extends Region {
 	public enum dispMode{
 		MODE_TIMETABLE,
 		MODE_SCHOOLMAP,
@@ -17,10 +17,10 @@ public class KioskMainParent extends Region {
 		MODE_NON,
 		
 	};
-	public KioskMainParent(){
+	public KioskMain(){
 		this(dispMode.MODE_NON);
 	}
-	public KioskMainParent(dispMode mode) {
+	public KioskMain(dispMode mode) {
 
 		URL location = getClass().getClassLoader().getResource(
 				"mainlayout/kiosk_main_layout.fxml");

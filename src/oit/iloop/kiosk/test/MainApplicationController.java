@@ -3,7 +3,7 @@ package oit.iloop.kiosk.test;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import oit.iloop.kiosk.kiosk_main.KioskMainParent;
+import oit.iloop.kiosk.kiosk_main.KioskMain;
 import oit.iloop.kiosk.kiosk_main.MainClock;
 
 import javafx.event.EventHandler;

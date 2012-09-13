@@ -3,8 +3,8 @@ package oit.iloop.kiosk.kiosk_main;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import oit.iloop.kiosk.kiosk_main.KioskMainParent.dispMode;
-import oit.iloop.kiosk.kiosk_timetable.TimeTableMainParent;
+import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
+import oit.iloop.kiosk.kiosk_timetable.TimeTableMain;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -55,7 +55,7 @@ public class KioskMainController implements Initializable {
 			setMainPane();
 			break;
 		case MODE_TIMETABLE:
-			setMainPane(new TimeTableMainParent());
+			setMainPane(new TimeTableMain());
 			break;
 		case MODE_NON:
 			setMainPane();
@@ -120,7 +120,7 @@ public class KioskMainController implements Initializable {
 			// TODO Auto-generated method stub
 			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
 
-				setMainPane(new TimeTableMainParent());
+				setMainPane(new TimeTableMain());
 				setButtonStyle(tab_01);
 			}
 		}

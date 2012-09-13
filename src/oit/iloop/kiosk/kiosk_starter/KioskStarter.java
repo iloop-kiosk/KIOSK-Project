@@ -4,15 +4,15 @@ import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import oit.iloop.kiosk.kiosk_main.KioskMainParent;
-import oit.iloop.kiosk.kiosk_main.KioskMainParent.dispMode;
+import oit.iloop.kiosk.kiosk_main.KioskMain;
+import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
 
 public class KioskStarter extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
-		Parent root = new KioskMainParent(dispMode.MODE_TIMETABLE);
+		Parent root = new KioskMain(dispMode.MODE_TIMETABLE);
 		
 		
 		root.setScaleX(1);

@@ -1,8 +1,8 @@
 package oit.iloop.kiosk.test;
 
 import java.io.IOException;
-import oit.iloop.kiosk.kiosk_main.KioskMainParent;
-import oit.iloop.kiosk.kiosk_main.KioskMainParent.dispMode;
+import oit.iloop.kiosk.kiosk_main.KioskMain;
+import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -21,7 +21,7 @@ public class MainApplicationClass extends Application {
 		aP.getChildren().add(new TextArea("aaaaaaaaaaaaaaaaaa"));
 		aP.getChildren().add(new Button("yheaaaaaa"));
 
-		Scene scene = new Scene(new KioskMainParent(dispMode.MODE_TIMETABLE));
+		Scene scene = new Scene(new KioskMain(dispMode.MODE_TIMETABLE));
 		// Scene scene = new Scene(aP);
 		primaryStage.setFullScreen(false);
 
