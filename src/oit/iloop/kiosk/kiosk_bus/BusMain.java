@@ -8,8 +8,9 @@ import java.io.IOException;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.layout.Region;
 
-public class BusMain extends Parent {
+public class BusMain extends Region {
 	
 	public BusMain() throws IOException{
 		

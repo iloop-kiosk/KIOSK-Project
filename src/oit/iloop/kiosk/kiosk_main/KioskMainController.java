@@ -1,8 +1,10 @@
 package oit.iloop.kiosk.kiosk_main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import oit.iloop.kiosk.kiosk_bus.BusMain;
 import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
 import oit.iloop.kiosk.kiosk_timetable.TimeTableMain;
 
@@ -43,9 +45,15 @@ public class KioskMainController implements Initializable {
 	public void setMainPane(dispMode mode) {
 		switch (mode) {
 		case MODE_BUS:
-			setMainPane();
+			try {
+				setMainPane(new BusMain());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			break;
 		case MODE_EXAMINATION:
+			
 			setMainPane();
 			break;
 		case MODE_SCHOOLMAP:
@@ -55,7 +63,12 @@ public class KioskMainController implements Initializable {
 			setMainPane();
 			break;
 		case MODE_TIMETABLE:
-			setMainPane(new TimeTableMain());
+			try {
+				setMainPane(new TimeTableMain());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			break;
 		case MODE_NON:
 			setMainPane();
@@ -120,7 +133,7 @@ public class KioskMainController implements Initializable {
 			// TODO Auto-generated method stub
 			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
 
-				setMainPane(new TimeTableMain());
+				setMainPane(dispMode.MODE_TIMETABLE);
 				setButtonStyle(tab_01);
 			}
 		}
@@ -132,7 +145,7 @@ public class KioskMainController implements Initializable {
 		public void handle(MouseEvent event) {
 			// TODO Auto-generated method stub
 			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
-				setMainPane();
+				setMainPane(dispMode.MODE_EXAMINATION);
 				setButtonStyle(tab_02);
 
 			}
@@ -146,7 +159,7 @@ public class KioskMainController implements Initializable {
 			// TODO Auto-generated method stub
 			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
 				
-				setMainPane();
+				setMainPane(dispMode.MODE_BUS);
 				setButtonStyle(tab_03);
 
 			}
@@ -161,7 +174,7 @@ public class KioskMainController implements Initializable {
 			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
 
 				setButtonStyle(tab_04);
-				setMainPane();
+				setMainPane(dispMode.MODE_SCHOOLMAP);
 			}
 		}
 
@@ -173,7 +186,7 @@ public class KioskMainController implements Initializable {
 			// TODO Auto-generated method stub
 			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
 				setButtonStyle(tab_05);
-				setMainPane();
+				setMainPane(dispMode.MODE_STUDYROOM);
 			}
 		}
 
