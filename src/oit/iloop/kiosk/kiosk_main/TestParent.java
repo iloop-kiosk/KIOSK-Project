@@ -1,5 +1,6 @@
 package oit.iloop.kiosk.kiosk_main;
 
+import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
@@ -24,7 +25,7 @@ public class TestParent extends Parent {
 			@Override
 			public void handle(MouseEvent arg0) {
 				// TODO Auto-generated method stub
-				ap.getScene().setRoot(new KioskMainParent());
+				ap.getScene().setRoot(new KioskMain(dispMode.MODE_TIMETABLE));
 				
 			}
 		});

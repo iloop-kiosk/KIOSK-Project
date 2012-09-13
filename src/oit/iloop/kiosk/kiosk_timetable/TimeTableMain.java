@@ -5,12 +5,13 @@ import java.net.URL;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.layout.Region;
 
-public class TimeTableMainParent extends Parent {
+public class TimeTableMain extends Region {
 
 	final static String timeTableFXMLsrc = "timetablelayout/timetable_main_layout.fxml";
 
-	public TimeTableMainParent() {
+	public TimeTableMain() {
 		// TODO Auto-generated constructor stub
 
 		URL location = getClass().getClassLoader()
