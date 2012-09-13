@@ -21,7 +21,7 @@ public class KioskStarter extends Application {
 		root.setTranslateY(0);
 		Scene scene = new Scene(root);
 		
-		primaryStage.setFullScreen(false);
+		primaryStage.setFullScreen(true);
 
 		primaryStage.setResizable(false);
 		

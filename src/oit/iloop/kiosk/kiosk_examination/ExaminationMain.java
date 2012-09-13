@@ -5,12 +5,13 @@ import java.net.URL;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.layout.Region;
 
-public class ExaminationMainParent extends Parent {
+public class ExaminationMain extends Region {
 	
 	final static String examination_FXML_src = "examination/Examination.fxml";
 	
-	public ExaminationMainParent(){
+	public ExaminationMain(){
 		
 		URL location = getClass().getClassLoader().getResource(examination_FXML_src);
 		FXMLLoader fxmlLoader = new FXMLLoader(location);

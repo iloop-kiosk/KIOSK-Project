@@ -17,6 +17,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import oit.iloop.kiosk.kiosk_bus.BusMain;
+import oit.iloop.kiosk.kiosk_examination.ExaminationMain;
 import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
 import oit.iloop.kiosk.kiosk_main.MainClock;
 import oit.iloop.kiosk.kiosk_timetable.TimeTableMain;
@@ -54,7 +55,7 @@ public class KioskMainController implements Initializable {
 			break;
 		case MODE_EXAMINATION:
 			
-			setMainPane();
+			setMainPane(new ExaminationMain());
 			break;
 		case MODE_SCHOOLMAP:
 			setMainPane();
