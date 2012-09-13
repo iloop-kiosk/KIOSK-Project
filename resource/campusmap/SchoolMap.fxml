@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1280.0" xmlns:fx="http://javafx.com/fxml" fx:controller="oit.iloop.kiosk.kiosk_schoolmap.CampusMapMainController">
   <children>
-    <ImageView fx:id="MAP_image" fitHeight="600.0" fitWidth="1200.0" layoutX="40.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="MAP_image" fitHeight="600.0" fitWidth="1200.0" layoutX="50.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
       <image>
         <Image url="@../../../../Desktop/地図2012_8_28/Map_Image/4階.png" preserveRatio="false" smooth="false" />
       </image>
