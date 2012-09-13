@@ -20,6 +20,7 @@ import oit.iloop.kiosk.kiosk_bus.BusMain;
 import oit.iloop.kiosk.kiosk_examination.ExaminationMain;
 import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
 import oit.iloop.kiosk.kiosk_main.MainClock;
+import oit.iloop.kiosk.kiosk_schoolmap.CampusMapMain;
 import oit.iloop.kiosk.kiosk_timetable.TimeTableMain;
 
 public class KioskMainController implements Initializable {
@@ -58,7 +59,12 @@ public class KioskMainController implements Initializable {
 			setMainPane(new ExaminationMain());
 			break;
 		case MODE_SCHOOLMAP:
-			setMainPane();
+			try {
+				setMainPane(new CampusMapMain());
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			break;
 		case MODE_STUDYROOM:
 			setMainPane();
