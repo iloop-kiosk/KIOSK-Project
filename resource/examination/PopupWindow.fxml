@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" fx:id="main_pane" prefHeight="768.0" prefWidth="1024.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="oit.iloop.kiosk.test.PopupWindowController">
+<AnchorPane id="AnchorPane" fx:id="main_pane" prefHeight="768.0" prefWidth="1024.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="oit.iloop.kiosk.kiosk_examination.PopupWindowController">
   <children>
     <GridPane layoutY="1.0" prefHeight="767.0" prefWidth="1023.0">
       <children>
