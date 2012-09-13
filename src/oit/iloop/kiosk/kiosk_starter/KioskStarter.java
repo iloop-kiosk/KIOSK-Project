@@ -6,13 +6,14 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import oit.iloop.kiosk.kiosk_main.KioskMain;
 import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
+import oit.iloop.kiosk.kiosk_toppage.TopPageParent;
 
 public class KioskStarter extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
-		Parent root = new KioskMain(dispMode.MODE_TIMETABLE);
+		Parent root = new TopPageParent();
 		
 		
 		root.setScaleX(1);
