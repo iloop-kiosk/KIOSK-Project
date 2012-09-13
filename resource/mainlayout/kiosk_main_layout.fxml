@@ -36,6 +36,6 @@
         </Pane>
       </children>
     </HBox>
-    <AnchorPane id="AnchorPane" fx:id="main_pane" layoutX="14.0" layoutY="115.0" prefHeight="895.0000999999975" prefWidth="1251.0" />
+    <AnchorPane id="AnchorPane" fx:id="main_pane" layoutX="14.0" layoutY="115.0" prefHeight="896.0" prefWidth="1251.0" />
   </children>
 </AnchorPane>

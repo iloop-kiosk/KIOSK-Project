@@ -85,24 +85,30 @@ public class KioskMainController implements Initializable {
 		main_pane.autosize();
 		parent.autosize();
 		double scaleX = main_pane.getWidth()/parent.getWidth();
-		double diffWidth = Math.abs(main_pane.getWidth() - parent.getWidth());
+		double diffWidth = main_pane.getWidth() - parent.getWidth();
 		
 		
 		double scaleY = main_pane.getHeight()/parent.getHeight();
-		double diffHeight = Math.abs(main_pane.getHeight() - parent.getHeight());
+		double diffHeight =main_pane.getHeight() - parent.getHeight();
 		
+		System.out.println("main_pane.getWidth():"+main_pane.getWidth());
+		System.out.println("main_pane.getHeight():"+main_pane.getHeight());
+		System.out.println("parent.getWidth():"+parent.getWidth());
+		System.out.println("parent.getHeight():"+parent.getHeight());
+		System.out.println("diffWidth:  "+diffWidth);
+		System.out.println("diffHeight: "+diffHeight);
 		
 		parent.setScaleX(scaleX);
 		parent.setScaleY(scaleY);
-//		parent.setLayoutX((diffWidth*scaleX)/2);
-//		parent.setLayoutY((diffHeight*scaleY)/2);
+		parent.setLayoutX(diffWidth/2);
+		parent.setLayoutY(diffHeight/2);
 		
 		System.out.println("getLayoutX = ");
 
 		parent.autosize();
 		main_pane.getChildren().clear();
 		main_pane.getChildren().add(parent);
-
+main_pane.getStylesheets().add("mainlayout/mainlayout_style.css");
 		
 	}
 
