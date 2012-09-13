@@ -11,6 +11,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.util.Duration;
@@ -20,25 +21,30 @@ public class MainClock extends AnchorPane {
 	Calendar currentTime = Calendar.getInstance();
 	SimpleDateFormat formatDate = new SimpleDateFormat("MM/dd (EEE)",
 			Locale.JAPANESE);
-	SimpleDateFormat formatTime = new SimpleDateFormat("HH:mm:ss");
+	SimpleDateFormat formatTime = new SimpleDateFormat("H:mm:ss");
 	Label dateLabel = new Label();
 	Label timeLabel = new Label();
 
 	VBox container = new VBox();
 
-	String style = "";
-	AnchorPane mainClockRoot = new AnchorPane();
+
+	
+	String containerStyle = "-fx-padding: 10px;-fx-spacing:10px;";
+	Pane mainClockRoot = new Pane();
 
 	public MainClock(double width, double height) {
 
-		setStyle(style);
+		getStylesheets().add("mainlayout/mainlayout_style.css");
+		getStyleClass().add("my-style");
 
 		dateLabel.setFont(new Font("SansSerif", 20));
+		dateLabel.getStyleClass().add("clock-text-style");
 		timeLabel.setFont(new Font("SansSerif", 30));
-
+		timeLabel.getStyleClass().add("clock-text-style");
 		refreshClock();
 		container.setPrefHeight(height);
 		container.setPrefWidth(width);
+		container.getStyleClass().add("clock-container-style");
 
 		container.getChildren().addAll(dateLabel, timeLabel);
 		getChildren().add(container);
@@ -88,7 +94,7 @@ public class MainClock extends AnchorPane {
 													@Override
 													public void handle(
 															ActionEvent event) {
-
+														
 														refreshClock();
 													}
 
