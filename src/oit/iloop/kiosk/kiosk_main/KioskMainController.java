@@ -4,20 +4,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-<<<<<<< HEAD
-
-import oit.iloop.kiosk.kiosk_examination.ExaminationMainParent;
-import oit.iloop.kiosk.kiosk_timetable.TimeTableMainParent;
-=======
-import oit.iloop.kiosk.kiosk_bus.BusMain;
 import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
-import oit.iloop.kiosk.kiosk_timetable.TimeTableMain;
->>>>>>> refs/heads/master
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -25,7 +16,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
-import javafx.scene.paint.Color;
+import oit.iloop.kiosk.kiosk_bus.BusMain;
+import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
+import oit.iloop.kiosk.kiosk_main.MainClock;
+import oit.iloop.kiosk.kiosk_timetable.TimeTableMain;
 
 public class KioskMainController implements Initializable {
 

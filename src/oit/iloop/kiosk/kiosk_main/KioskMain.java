@@ -34,7 +34,7 @@ public class KioskMain extends Region {
 			root.getStylesheets().add("mainlayout/mainlayout_style.css");
 			getChildren().add(root);
 			System.out.println("getChildern");
-			KioskMainController kmController = fxmlLoader.getController();
+			KioskMainController kmController = (KioskMainController) fxmlLoader.getController();
 			System.out.println("kmController");
 			kmController.setMainPane(mode);
 		} catch (IOException e) {

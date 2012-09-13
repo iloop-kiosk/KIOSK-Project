@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import oit.iloop.kiosk.kiosk_timetable.TimeTableMainParent;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
