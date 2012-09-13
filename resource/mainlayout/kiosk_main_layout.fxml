@@ -18,11 +18,11 @@
         </AnchorPane>
         <Pane prefHeight="74.0" prefWidth="830.0">
           <children>
-            <HBox layoutX="14.0" layoutY="41.0" prefHeight="60.000091552734375" prefWidth="800.0">
+            <HBox layoutX="14.0" layoutY="41.0" prefHeight="60.000091552734375" prefWidth="800.0" spacing="5.0">
               <children>
                 <Button fx:id="tab_01" mnemonicParsing="false" prefHeight="60.0" prefWidth="160.0" text="Button" />
                 <Button fx:id="tab_02" mnemonicParsing="false" prefHeight="60.0" prefWidth="160.0" text="Button" />
-                <Button fx:id="tab_03" mnemonicParsing="false" prefHeight="60.000091552734375" prefWidth="160.0" text="Button" />
+                <Button fx:id="tab_03" mnemonicParsing="false" prefHeight="60.0" prefWidth="160.0" text="Button" />
                 <Button id="tab04" fx:id="tab_04" mnemonicParsing="false" prefHeight="60.0" prefWidth="160.0" text="Button" />
                 <Button fx:id="tab_05" mnemonicParsing="false" prefHeight="60.0" prefWidth="160.0" text="Button" />
               </children>
@@ -31,11 +31,11 @@
         </Pane>
         <Pane prefHeight="74.0" prefWidth="226.0">
           <children>
-            <AnchorPane id="clock" fx:id="main_clock" layoutX="14.0" layoutY="14.0" prefHeight="73.0" prefWidth="195.0" />
+            <AnchorPane id="clock" fx:id="main_clock" layoutX="14.0" prefHeight="92.0" prefWidth="200.0" />
           </children>
         </Pane>
       </children>
     </HBox>
-    <Pane fx:id="main_pane" layoutX="14.0" layoutY="115.0" prefHeight="895.0" prefWidth="1252.0" />
+    <AnchorPane id="AnchorPane" fx:id="main_pane" layoutX="14.0" layoutY="115.0" prefHeight="896.0" prefWidth="1251.0" />
   </children>
 </AnchorPane>

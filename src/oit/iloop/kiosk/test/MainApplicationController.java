@@ -3,7 +3,7 @@ package oit.iloop.kiosk.test;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import oit.iloop.kiosk.kiosk_main.KioskMainParent;
+import oit.iloop.kiosk.kiosk_main.KioskMain;
 import oit.iloop.kiosk.kiosk_main.MainClock;
 
 import javafx.event.EventHandler;
@@ -145,7 +145,6 @@ public class MainApplicationController implements Initializable {
 		tab_05.setText("自習室");
 		tab_05.addEventHandler(MouseEvent.ANY, tab05Handler);
 
-		main_pane.getChildren().add(new KioskMainParent());
 		
 		
 		
