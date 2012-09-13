@@ -108,7 +108,6 @@ public class KioskMainController implements Initializable {
 		parent.autosize();
 		main_pane.getChildren().clear();
 		main_pane.getChildren().add(parent);
-main_pane.getStylesheets().add("mainlayout/mainlayout_style.css");
 		
 	}
 
