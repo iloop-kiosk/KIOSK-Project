@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import java.net.*?>
 <?import java.util.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1280.0" xmlns:fx="http://javafx.com/fxml" fx:controller="oit.iloop.kiosk.kiosk_main.KioskMainController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1280.0" styleClass=", background" xmlns:fx="http://javafx.com/fxml" fx:controller="oit.iloop.kiosk.kiosk_main.KioskMainController">
   <children>
     <VBox layoutX="14.0" layoutY="14.0" prefHeight="996.0" prefWidth="1252.0" />
     <HBox layoutX="14.0" layoutY="14.0" prefHeight="101.0" prefWidth="1252.0">
@@ -38,4 +39,7 @@
     </HBox>
     <AnchorPane id="AnchorPane" fx:id="main_pane" layoutX="14.0" layoutY="115.0" prefHeight="896.0" prefWidth="1251.0" />
   </children>
+  <stylesheets>
+    <URL value="@mainlayout_style.css" />
+  </stylesheets>
 </AnchorPane>
