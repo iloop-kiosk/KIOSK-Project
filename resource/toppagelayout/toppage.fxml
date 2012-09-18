@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1280.0" xmlns:fx="http://javafx.com/fxml" fx:controller="oit.iloop.kiosk.kiosk_toppage.TopPageFXMLController">
+  <children>
+    <ImageView fx:id="sab" fitHeight="1024.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@Base04.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="bus" fitHeight="351.87225341796875" fitWidth="367.51103220547157" layoutX="891.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@bus01.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="zyugyou" fitHeight="329.0424134557765" fitWidth="343.66650390625" layoutX="37.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@lecture01.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="map" fitHeight="121.80869674682617" fitWidth="424.48484382163383" layoutX="428.0" layoutY="724.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@map01.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="lecture" fitHeight="319.6767021943025" fitWidth="329.6666039062475" layoutX="40.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@pcRoom01.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="test" fitHeight="337.79791259765625" fitWidth="348.35409551382503" layoutX="899.0" layoutY="527.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@test01.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+  </children>
+</AnchorPane>

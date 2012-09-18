@@ -4,6 +4,8 @@ import java.io.IOException;
 import oit.iloop.kiosk.kiosk_main.KioskMain;
 import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
 
+import oit.iloop.kiosk.kiosk_toppage.TopPageParent;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -17,9 +19,7 @@ public class MainApplicationClass extends Application {
 	public void start(Stage primaryStage) throws IOException {
 		// TODO Auto-generated method stub
 
-		AnchorPane aP = new AnchorPane();
-		aP.getChildren().add(new TextArea("aaaaaaaaaaaaaaaaaa"));
-		aP.getChildren().add(new Button("yheaaaaaa"));
+
 
 		Scene scene = new Scene(new KioskMain(dispMode.MODE_TIMETABLE));
 		// Scene scene = new Scene(aP);

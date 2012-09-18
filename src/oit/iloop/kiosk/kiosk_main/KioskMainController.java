@@ -9,6 +9,7 @@ import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -20,7 +21,9 @@ import oit.iloop.kiosk.kiosk_bus.BusMain;
 import oit.iloop.kiosk.kiosk_examination.ExaminationMain;
 import oit.iloop.kiosk.kiosk_main.KioskMain.dispMode;
 import oit.iloop.kiosk.kiosk_main.MainClock;
+import oit.iloop.kiosk.kiosk_schoolmap.CampusMapMain;
 import oit.iloop.kiosk.kiosk_timetable.TimeTableMain;
+import oit.iloop.kiosk.kiosk_toppage.TopPageParent;
 
 public class KioskMainController implements Initializable {
 
@@ -42,6 +45,26 @@ public class KioskMainController implements Initializable {
 	private Pane main_clock;
 	@FXML
 	private Pane main_logo;
+	Parent parent;
+
+	void setParent(Parent parent) {
+		this.parent = parent;
+	}
+
+	EventHandler<MouseEvent> logoHandler = new EventHandler<MouseEvent>() {
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			try {
+				parent.getScene().setRoot(new TopPageParent());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	};
 
 	public void setMainPane(dispMode mode) {
 		switch (mode) {
@@ -54,11 +77,16 @@ public class KioskMainController implements Initializable {
 			}
 			break;
 		case MODE_EXAMINATION:
-			
+
 			setMainPane(new ExaminationMain());
 			break;
 		case MODE_SCHOOLMAP:
-			setMainPane();
+			try {
+				setMainPane(new CampusMapMain());
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			break;
 		case MODE_STUDYROOM:
 			setMainPane();
@@ -85,37 +113,39 @@ public class KioskMainController implements Initializable {
 	private void setMainPane(Region parent) {
 		main_pane.autosize();
 		parent.autosize();
-		double scaleX = main_pane.getWidth()/parent.getWidth();
+		double scaleX = main_pane.getWidth() / parent.getWidth();
 		double diffWidth = main_pane.getWidth() - parent.getWidth();
-		
-		
-		double scaleY = main_pane.getHeight()/parent.getHeight();
-		double diffHeight =main_pane.getHeight() - parent.getHeight();
-		
-		System.out.println("main_pane.getWidth():"+main_pane.getWidth());
-		System.out.println("main_pane.getHeight():"+main_pane.getHeight());
-		System.out.println("parent.getWidth():"+parent.getWidth());
-		System.out.println("parent.getHeight():"+parent.getHeight());
-		System.out.println("diffWidth:  "+diffWidth);
-		System.out.println("diffHeight: "+diffHeight);
-		
+
+		double scaleY = main_pane.getHeight() / parent.getHeight();
+		double diffHeight = main_pane.getHeight() - parent.getHeight();
+
+		System.out.println("main_pane.getWidth():" + main_pane.getWidth());
+		System.out.println("main_pane.getHeight():" + main_pane.getHeight());
+		System.out.println("parent.getWidth():" + parent.getWidth());
+		System.out.println("parent.getHeight():" + parent.getHeight());
+		System.out.println("diffWidth:  " + diffWidth);
+		System.out.println("diffHeight: " + diffHeight);
+
 		parent.setScaleX(scaleX);
 		parent.setScaleY(scaleY);
-		parent.setLayoutX(diffWidth/2);
-		parent.setLayoutY(diffHeight/2);
-		
+		parent.setLayoutX(diffWidth / 2);
+		parent.setLayoutY(diffHeight / 2);
+
 		System.out.println("getLayoutX = ");
 
 		parent.autosize();
 		main_pane.getChildren().clear();
 		main_pane.getChildren().add(parent);
-		
+
+		main_pane.getStylesheets().add("mainlayout/mainlayout_style.css");
+
 	}
 
 	private void setMainPane() {
 		main_pane.getChildren().clear();
 	}
-	private void setButtonStyle(Button selectedButton){
+
+	private void setButtonStyle(Button selectedButton) {
 		tab_01.getStyleClass().clear();
 		tab_01.getStyleClass().add("button");
 		tab_02.getStyleClass().clear();
@@ -126,12 +156,12 @@ public class KioskMainController implements Initializable {
 		tab_04.getStyleClass().add("button");
 		tab_05.getStyleClass().clear();
 		tab_05.getStyleClass().add("button");
-		
-		
+
 		selectedButton.getStyleClass().clear();
 		selectedButton.getStyleClass().add("button-selected");
-		
+
 	}
+
 	private EventHandler<MouseEvent> tab01Handler = new EventHandler<MouseEvent>() {
 
 		@Override
@@ -154,7 +184,6 @@ public class KioskMainController implements Initializable {
 				setMainPane(dispMode.MODE_EXAMINATION);
 				setButtonStyle(tab_02);
 
-
 			}
 		}
 
@@ -165,7 +194,7 @@ public class KioskMainController implements Initializable {
 		public void handle(MouseEvent event) {
 			// TODO Auto-generated method stub
 			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
-				
+
 				setMainPane(dispMode.MODE_BUS);
 				setButtonStyle(tab_03);
 
@@ -205,7 +234,7 @@ public class KioskMainController implements Initializable {
 
 		tab_01.setText("授業");
 		tab_01.addEventHandler(MouseEvent.ANY, tab01Handler);
-		
+
 		tab_02.setText("テスト");
 		tab_02.addEventHandler(MouseEvent.ANY, tab02Handler);
 		tab_03.setText("バス時刻表");
@@ -214,6 +243,7 @@ public class KioskMainController implements Initializable {
 		tab_04.addEventHandler(MouseEvent.ANY, tab04Handler);
 		tab_05.setText("自習室");
 		tab_05.addEventHandler(MouseEvent.ANY, tab05Handler);
+		main_logo.addEventHandler(MouseEvent.MOUSE_CLICKED, logoHandler);
 		main_clock.autosize();
 
 		System.out.println("main_clock:height = " + main_clock.getHeight()
