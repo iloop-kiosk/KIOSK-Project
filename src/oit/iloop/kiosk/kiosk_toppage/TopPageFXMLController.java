@@ -29,7 +29,11 @@ public class TopPageFXMLController implements Initializable {
 	ImageView bus;
 
 	Parent parent;
+	KioskMain kioskMain;
 	
+	public void setKioskMain(KioskMain main){
+		kioskMain = main;
+	}
 	
 	void setParent(Parent parent){
 		this.parent = parent;
@@ -42,7 +46,8 @@ public class TopPageFXMLController implements Initializable {
 			if(event.getEventType().equals(MouseEvent.MOUSE_CLICKED)){
 			
 				if(parent != null){
-					parent.getScene().setRoot(new KioskMain(dispMode.MODE_TIMETABLE));
+					kioskMain.setMode(dispMode.MODE_TIMETABLE);
+					parent.getScene().setRoot(kioskMain);
 				
 				}
 			}
@@ -59,7 +64,9 @@ public class TopPageFXMLController implements Initializable {
 			
 			if(event.getEventType().equals(MouseEvent.MOUSE_CLICKED)){
 				if(parent != null){
-					parent.getScene().setRoot(new KioskMain(dispMode.MODE_STUDYROOM));
+					kioskMain.setMode(dispMode.MODE_STUDYROOM);
+					parent.getScene().setRoot(kioskMain);
+				
 				}
 			}
 		}
@@ -71,7 +78,9 @@ public class TopPageFXMLController implements Initializable {
 			// TODO Auto-generated method stub
 			if(event.getEventType().equals(MouseEvent.MOUSE_CLICKED)){
 				if(parent != null){
-					parent.getScene().setRoot(new KioskMain(dispMode.MODE_SCHOOLMAP));
+					kioskMain.setMode(dispMode.MODE_SCHOOLMAP);
+					parent.getScene().setRoot(kioskMain);
+				
 				}
 			}
 			
@@ -85,8 +94,10 @@ public class TopPageFXMLController implements Initializable {
 			// TODO Auto-generated method stub
 			if(event.getEventType().equals(MouseEvent.MOUSE_CLICKED)){
 				if(parent != null){
-					parent.getScene().setRoot(new KioskMain(dispMode.MODE_EXAMINATION));
-					}
+					kioskMain.setMode(dispMode.MODE_EXAMINATION);
+					parent.getScene().setRoot(kioskMain);
+				
+				}
 				}
 		}
 	
@@ -99,7 +110,9 @@ public class TopPageFXMLController implements Initializable {
 			// TODO Auto-generated method stub
 			if(event.getEventType().equals(MouseEvent.MOUSE_CLICKED)){
 				if(parent != null){
-					parent.getScene().setRoot(new KioskMain(dispMode.MODE_BUS));
+					kioskMain.setMode(dispMode.MODE_BUS);
+					parent.getScene().setRoot(kioskMain);
+				
 				}
 			}
 				

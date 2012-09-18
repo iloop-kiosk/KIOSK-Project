@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane id="timetable_style" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="640.0" style="-fx-background-color:  linear-gradient(to bottom, #f2f5f6 0%,#e3eaed 37%,#a8cedb 100%);&#10;-fx-background-radius: 10px;" xmlns:fx="http://javafx.com/fxml" />

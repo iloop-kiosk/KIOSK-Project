@@ -47,57 +47,64 @@ public class KioskMainController implements Initializable {
 	private Pane main_logo;
 	Parent parent;
 
+	BusMain busMain;
+	TopPageParent topPageParent;
+	CampusMapMain campusMapMain;
+	TimeTableMain timeTableMain;
+	ExaminationMain examinationMain;
+
+	// StudyRoomMain studyRoomMain;
+	public void setTopPageParent(TopPageParent topPage) {
+		topPageParent = topPage;
+
+		main_logo.addEventHandler(MouseEvent.MOUSE_CLICKED,
+				new EventHandler<MouseEvent>() {
+
+					@Override
+					public void handle(MouseEvent arg0) {
+						// TODO Auto-generated method stub
+						parent.getScene().setRoot(topPageParent);
+					}
+
+				});
+
+	}
+
 	void setParent(Parent parent) {
 		this.parent = parent;
 	}
 
-	EventHandler<MouseEvent> logoHandler = new EventHandler<MouseEvent>() {
-
-		@Override
-		public void handle(MouseEvent event) {
-			// TODO Auto-generated method stub
-			try {
-				parent.getScene().setRoot(new TopPageParent());
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-
-	};
+	public void setReturnTopEvenHandler(EventHandler<MouseEvent> event) {
+		main_logo.addEventHandler(MouseEvent.MOUSE_CLICKED, event);
+	}
 
 	public void setMainPane(dispMode mode) {
+
 		switch (mode) {
 		case MODE_BUS:
-			try {
-				setMainPane(new BusMain());
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			setMainPane(busMain);
+
+			setButtonStyle(tab_03);
 			break;
 		case MODE_EXAMINATION:
 
-			setMainPane(new ExaminationMain());
+			setMainPane(examinationMain);
+			setButtonStyle(tab_02);
 			break;
 		case MODE_SCHOOLMAP:
-			try {
-				setMainPane(new CampusMapMain());
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+
+			setMainPane(campusMapMain);
+			setButtonStyle(tab_04);
 			break;
 		case MODE_STUDYROOM:
 			setMainPane();
+			setButtonStyle(tab_05);
 			break;
 		case MODE_TIMETABLE:
-			try {
-				setMainPane(new TimeTableMain());
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+
+			setMainPane(timeTableMain);
+
+			setButtonStyle(tab_01);
 			break;
 		case MODE_NON:
 			setMainPane();
@@ -112,6 +119,7 @@ public class KioskMainController implements Initializable {
 
 	private void setMainPane(Region parent) {
 		main_pane.autosize();
+
 		parent.autosize();
 		double scaleX = main_pane.getWidth() / parent.getWidth();
 		double diffWidth = main_pane.getWidth() - parent.getWidth();
@@ -137,29 +145,37 @@ public class KioskMainController implements Initializable {
 		main_pane.getChildren().clear();
 		main_pane.getChildren().add(parent);
 
-		main_pane.getStylesheets().add("mainlayout/mainlayout_style.css");
-
 	}
 
 	private void setMainPane() {
 		main_pane.getChildren().clear();
 	}
 
-	private void setButtonStyle(Button selectedButton) {
+	private void resetButton() {
+		tab_01.setStyle("");
 		tab_01.getStyleClass().clear();
 		tab_01.getStyleClass().add("button");
+		tab_02.setStyle("");
 		tab_02.getStyleClass().clear();
 		tab_02.getStyleClass().add("button");
+		tab_03.setStyle("");
 		tab_03.getStyleClass().clear();
 		tab_03.getStyleClass().add("button");
+		tab_04.setStyle("");
 		tab_04.getStyleClass().clear();
 		tab_04.getStyleClass().add("button");
+		tab_05.setStyle("");
 		tab_05.getStyleClass().clear();
 		tab_05.getStyleClass().add("button");
 
-		selectedButton.getStyleClass().clear();
-		selectedButton.getStyleClass().add("button-selected");
+	}
 
+	private void setButtonStyle(Button selectedButton) {
+		resetButton();
+		selectedButton
+				.setStyle("-fx-background-color: linear-gradient(to bottom, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%);"
+						+ "	-fx-background-radius: 8 8 0 0;"
+						+ "-fx-text-fill: orange;");
 	}
 
 	private EventHandler<MouseEvent> tab01Handler = new EventHandler<MouseEvent>() {
@@ -232,6 +248,17 @@ public class KioskMainController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 
+		try {
+
+			campusMapMain = new CampusMapMain();
+			timeTableMain = new TimeTableMain();
+			examinationMain = new ExaminationMain();
+
+			busMain = new BusMain();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		tab_01.setText("授業");
 		tab_01.addEventHandler(MouseEvent.ANY, tab01Handler);
 
@@ -243,9 +270,7 @@ public class KioskMainController implements Initializable {
 		tab_04.addEventHandler(MouseEvent.ANY, tab04Handler);
 		tab_05.setText("自習室");
 		tab_05.addEventHandler(MouseEvent.ANY, tab05Handler);
-		main_logo.addEventHandler(MouseEvent.MOUSE_CLICKED, logoHandler);
 		main_clock.autosize();
-
 		System.out.println("main_clock:height = " + main_clock.getHeight()
 				+ ", width = " + main_clock.getWidth());
 		main_clock.getChildren().add(
@@ -253,7 +278,7 @@ public class KioskMainController implements Initializable {
 		main_logo.getChildren().add(
 				new ImageView(
 						new Image(getClass().getClassLoader()
-								.getResourceAsStream("mainlayout/ohit101.gif"),
+								.getResourceAsStream("mainlayout/ohit101.png"),
 								main_logo.getHeight(), main_logo.getWidth(),
 								true, true)));
 

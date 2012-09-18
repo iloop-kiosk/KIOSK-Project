@@ -10,10 +10,13 @@ import oit.iloop.kiosk.kiosk_toppage.TopPageParent;
 
 public class KioskStarter extends Application {
 
+	TopPageParent tpParent;
+	
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-
-		Parent root = new TopPageParent();
+		
+		Parent root = new TopPageParent(new KioskMain());
 		
 		
 		root.setScaleX(1);
