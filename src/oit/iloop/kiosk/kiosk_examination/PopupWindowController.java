@@ -42,12 +42,7 @@ public class PopupWindowController implements Initializable {
     	this.popup = popup;
     }
     
-    public void startEdision(){
-    	
-    	
-    	
-    }
-    
+  
     
     @FXML
     public void handle1ButtonAction(ActionEvent event) {
