@@ -39,7 +39,4 @@
     </HBox>
     <AnchorPane id="AnchorPane" fx:id="main_pane" layoutX="14.0" layoutY="115.0" prefHeight="896.0" prefWidth="1251.0" />
   </children>
-  <stylesheets>
-    <URL value="@mainlayout_style.css" />
-  </stylesheets>
 </AnchorPane>

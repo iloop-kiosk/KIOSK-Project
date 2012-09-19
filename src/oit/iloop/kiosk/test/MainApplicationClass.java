@@ -21,7 +21,7 @@ public class MainApplicationClass extends Application {
 
 
 
-		Scene scene = new Scene(new KioskMain(dispMode.MODE_TIMETABLE));
+		Scene scene = new Scene(new KioskMain());
 		// Scene scene = new Scene(aP);
 		primaryStage.setFullScreen(false);
 

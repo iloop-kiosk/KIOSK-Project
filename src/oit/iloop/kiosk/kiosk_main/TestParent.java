@@ -25,7 +25,7 @@ public class TestParent extends Parent {
 			@Override
 			public void handle(MouseEvent arg0) {
 				// TODO Auto-generated method stub
-				ap.getScene().setRoot(new KioskMain(dispMode.MODE_TIMETABLE));
+				ap.getScene().setRoot(new KioskMain());
 				
 			}
 		});

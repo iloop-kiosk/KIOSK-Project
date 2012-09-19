@@ -38,6 +38,29 @@ public class CampusMapMainController implements Initializable {
 	
 	
 	
+	public void setActiveButton(Button selectedButton){
+		resetButtonStyle();
+		selectedButton
+				.setStyle("-fx-background-color: linear-gradient(to bottom, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%);"
+						+ "	-fx-background-radius: 8 8 0 0;"
+						+ "-fx-text-fill: orange;");
+	}
+	public void resetButtonStyle(){
+		btn01.setStyle("");
+		btn02.setStyle("");
+		btn03.setStyle("");
+		btn04.setStyle("");
+		btn05.setStyle("");
+		btn06.setStyle("");
+		btn01.getStyleClass().add("button");
+		btn02.getStyleClass().add("button");
+		btn03.getStyleClass().add("button");
+		btn04.getStyleClass().add("button");
+		btn05.getStyleClass().add("button");
+		btn06.getStyleClass().add("button");
+		
+	}
+	
 
 	EventHandler<MouseEvent> eHandler01 = new EventHandler<MouseEvent>(){
 
@@ -45,6 +68,7 @@ public class CampusMapMainController implements Initializable {
 		public void handle(MouseEvent event) {
 			// TODO Auto-generated method stub
 			MAP_image.setImage(maps[0]);
+			setActiveButton(btn01);
 		}
 		
 	};
@@ -56,10 +80,52 @@ public class CampusMapMainController implements Initializable {
 		public void handle(MouseEvent event) {
 			// TODO Auto-generated method stub
 			MAP_image.setImage(maps[1]);
+			setActiveButton(btn02);
 		}
 		
 	};
 	
+	EventHandler<MouseEvent> eHandler03 = new EventHandler<MouseEvent>(){
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			MAP_image.setImage(maps[2]);
+			setActiveButton(btn03);
+		}
+		
+	};
+	EventHandler<MouseEvent> eHandler04 = new EventHandler<MouseEvent>(){
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			MAP_image.setImage(maps[3]);
+			setActiveButton(btn04);
+		}
+		
+	};
+	EventHandler<MouseEvent> eHandler05 = new EventHandler<MouseEvent>(){
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			MAP_image.setImage(maps[4]);
+			setActiveButton(btn05);
+		}
+		
+	};
+	
+	EventHandler<MouseEvent> eHandler06 = new EventHandler<MouseEvent>(){
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			MAP_image.setImage(maps[5]);
+			setActiveButton(btn06);
+		}
+		
+	};
 	
 	
 	
@@ -73,8 +139,11 @@ public class CampusMapMainController implements Initializable {
 		
 		btn02.addEventHandler(MouseEvent.MOUSE_CLICKED, eHandler02);
 		
-		
-		
+		btn03.addEventHandler(MouseEvent.MOUSE_CLICKED, eHandler03);
+		btn04.addEventHandler(MouseEvent.MOUSE_CLICKED, eHandler04);
+		btn05.addEventHandler(MouseEvent.MOUSE_CLICKED, eHandler05);
+		btn06.addEventHandler(MouseEvent.MOUSE_CLICKED, eHandler06);
+		setActiveButton(btn01);
 		
 	}
 

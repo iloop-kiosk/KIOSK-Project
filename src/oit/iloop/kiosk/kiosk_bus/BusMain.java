@@ -15,7 +15,7 @@ public class BusMain extends Region {
 	public BusMain() throws IOException{
 		
 		/*FXMLファイルの読み込み*/
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("businfo.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("buslayout/businfo.fxml"));
 		
 		/**/
 		Parent fxmlSchene = (Parent)fxmlLoader.load();

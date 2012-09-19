@@ -3,14 +3,16 @@ package oit.iloop.kiosk.kiosk_toppage;
 import java.io.IOException;
 import java.net.URL;
 
+import oit.iloop.kiosk.kiosk_main.KioskMain;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
 public class TopPageParent extends Parent {
 
-	public TopPageParent() throws IOException {
+	public TopPageParent(KioskMain main) throws IOException {
 		// TODO Auto-generated constructor stub
-		
+		main.setTopPage(this);	
 		
 		
 
@@ -20,8 +22,10 @@ public class TopPageParent extends Parent {
 		
 		
 		TopPageFXMLController maController = fxmlLoader.getController();
+		maController.setKioskMain(main);
 		maController.setParent(this);
 		getChildren().add(root);
+	
 		
 		
 		

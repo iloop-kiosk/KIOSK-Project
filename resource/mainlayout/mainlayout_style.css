@@ -41,14 +41,20 @@
 
 
 .button:pressed {
-	-fx-background-radius: 8 8 0 0;
 	-fx-text-fill: blue;
 }
 .button:hover{
 	-fx-text-fill: red;
 }
-
-.button-selected {
+.button:pressed{
+	
+	-fx-background-color: linear-gradient(to bottom, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%);
+	-fx-background-radius: 8 8 0 0;
+	-fx-background-insets: 0, 1, 2 0, 1, 2 0, 0, 0 0, 0, 0;
+	-fx-text-fill: green;
+	
+}
+.button-select {
 	-fx-background-color: linear-gradient(to bottom, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%);
 	-fx-background-radius: 8 8 0 0;
 	-fx-background-insets: 0, 1, 2 0, 1, 2 0, 0, 0 0, 0, 0;
