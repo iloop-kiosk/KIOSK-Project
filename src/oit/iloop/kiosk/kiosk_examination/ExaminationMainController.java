@@ -24,6 +24,17 @@ public class ExaminationMainController implements Initializable {
 	@FXML private Pane main_pane;
 
 	@FXML Button button01; 
+	@FXML Button button02; 
+	@FXML Button button03; 
+	@FXML Button button04; 
+	@FXML Button button05; 
+	@FXML Button button06; 
+	@FXML Button button07; 
+	@FXML Button button08; 
+	@FXML Button button09; 
+	@FXML Button button10; 
+	@FXML Button button11; 
+	@FXML Button button12; 
 	private void popupPane() {
 
 
@@ -57,56 +68,155 @@ public class ExaminationMainController implements Initializable {
 		}
 
 	};
+	private EventHandler<MouseEvent> button02Handler = new EventHandler<MouseEvent>() {
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+				
+				popupPane();
+			}
+		}
+
+	};
 	
-	@FXML private void button02(MouseEvent Event) {
-		
-	}
-	
-	@FXML private void button03(MouseEvent Event) {
-		
-	}
-	
-	@FXML private void button04(MouseEvent Event) {
-		
-	}
-	
-	@FXML private void button05(MouseEvent Event) {
-		
-	}
-	
-	@FXML private void button06(MouseEvent Event) {
-		
-	}
-	
-	@FXML private void button07(MouseEvent Event) {
-		
-	}
-	
-	@FXML private void button08(MouseEvent Event) {
-		
-	}
-	
-	@FXML private void button09(MouseEvent Event) {
-		
-	}
-	
-	@FXML private void button10(MouseEvent Event) {
-		
-	}
-	
-	@FXML private void button11(MouseEvent Event) {
-		
-	}
-	
-	@FXML private void button12(MouseEvent Event) {
-		
-	}
-	
+	private EventHandler<MouseEvent> button03Handler = new EventHandler<MouseEvent>() {
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+				
+				popupPane();
+			}
+		}
+
+	};
+	private EventHandler<MouseEvent> button04Handler = new EventHandler<MouseEvent>() {
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+				
+				popupPane();
+			}
+		}
+
+	};
+	private EventHandler<MouseEvent> button05Handler = new EventHandler<MouseEvent>() {
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+				
+				popupPane();
+			}
+		}
+
+	};
+	private EventHandler<MouseEvent> button06Handler = new EventHandler<MouseEvent>() {
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+				
+				popupPane();
+			}
+		}
+
+	};
+	private EventHandler<MouseEvent> button07Handler = new EventHandler<MouseEvent>() {
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+				
+				popupPane();
+			}
+		}
+
+	};
+	private EventHandler<MouseEvent> button08Handler = new EventHandler<MouseEvent>() {
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+				
+				popupPane();
+			}
+		}
+
+	};
+	private EventHandler<MouseEvent> button09Handler = new EventHandler<MouseEvent>() {
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+				
+				popupPane();
+			}
+		}
+
+	};
+	private EventHandler<MouseEvent> button10Handler = new EventHandler<MouseEvent>() {
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+				
+				popupPane();
+			}
+		}
+
+	};
+	private EventHandler<MouseEvent> button11Handler = new EventHandler<MouseEvent>() {
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+				
+				popupPane();
+			}
+		}
+
+	};
+	private EventHandler<MouseEvent> button12Handler = new EventHandler<MouseEvent>() {
+
+		@Override
+		public void handle(MouseEvent event) {
+			// TODO Auto-generated method stub
+			if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+				
+				popupPane();
+			}
+		}
+
+	};
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-button01.setText("test");
+
 button01.addEventHandler(MouseEvent.ANY, button01Handler);
+button02.addEventHandler(MouseEvent.ANY, button02Handler);
+button03.addEventHandler(MouseEvent.ANY, button03Handler);
+button04.addEventHandler(MouseEvent.ANY, button04Handler);
+button05.addEventHandler(MouseEvent.ANY, button05Handler);
+button06.addEventHandler(MouseEvent.ANY, button06Handler);
+button07.addEventHandler(MouseEvent.ANY, button07Handler);
+button08.addEventHandler(MouseEvent.ANY, button08Handler);
+button09.addEventHandler(MouseEvent.ANY, button09Handler);
+button10.addEventHandler(MouseEvent.ANY, button10Handler);
+button11.addEventHandler(MouseEvent.ANY, button11Handler);
+button12.addEventHandler(MouseEvent.ANY, button12Handler);
 	}
 
 }
