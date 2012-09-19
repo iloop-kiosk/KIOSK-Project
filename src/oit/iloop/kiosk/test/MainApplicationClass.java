@@ -33,6 +33,10 @@ public class MainApplicationClass extends Application {
 		
 		
 
+		
+		System.out.println("hage");
+		
+		
 	}
 
 	public static void main(String[] args) {

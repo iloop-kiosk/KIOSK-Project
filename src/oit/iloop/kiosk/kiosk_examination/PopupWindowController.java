@@ -31,6 +31,7 @@ public class PopupWindowController implements Initializable {
     @FXML private AnchorPane main_pane;
     @FXML private AnchorPane top_pane;
     @FXML private Pane right_pane;
+    @FXML private Pane left_pane;
     //@FXML private VBox left_vbox;
     @FXML private GridPane gridpane2;
     @FXML private ImageView left_arrow;
@@ -41,13 +42,17 @@ public class PopupWindowController implements Initializable {
     	this.popup = popup;
     }
     
-    
+    public void startEdision(){
+    	
+    	
+    	
+    }
     
     
     @FXML
     public void handle1ButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        System.out.println("閉じる");
+        label.setText("閉じる");
         popup.hide();
         
     }
