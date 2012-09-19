@@ -29,6 +29,7 @@ public class MainApplicationClass extends Application {
 		primaryStage.show();
 		
 
+		System.out.println("hogehoge");
 		
 	}
 
