@@ -28,7 +28,7 @@ public class MainApplicationClass extends Application {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
-
+		System.out.println("hage");
 		
 	}
 
