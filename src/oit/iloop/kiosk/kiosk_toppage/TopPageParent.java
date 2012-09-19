@@ -21,7 +21,7 @@ public class TopPageParent extends Parent {
 		Parent root = (Parent)fxmlLoader.load();
 		
 		
-		TopPageFXMLController maController = fxmlLoader.getController();
+		TopPageFXMLController maController = (TopPageFXMLController) fxmlLoader.getController();
 		maController.setKioskMain(main);
 		maController.setParent(this);
 		getChildren().add(root);
