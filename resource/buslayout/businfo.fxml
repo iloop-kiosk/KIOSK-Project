@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns:fx="http://javafx.com/fxml" fx:controller="oit.iloop.kiosk.InfoController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns:fx="http://javafx.com/fxml">
   <children>
     <TabPane id="TabsId" prefHeight="1024.0" prefWidth="1310.9999000000025" side="LEFT" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="30.0" tabMaxWidth="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <tabs>
@@ -17,7 +17,7 @@
               <children>
                 <Text layoutX="602.0" layoutY="175.0" scaleX="14.360849183219887" scaleY="10.865202504576049" strokeType="OUTSIDE" strokeWidth="0.0" text="長尾行き" textAlignment="CENTER" />
                 <Text layoutX="602.0" layoutY="602.0" scaleX="14.360849183219887" scaleY="10.322799842318599" strokeType="OUTSIDE" strokeWidth="0.0" text="樟葉行き" textAlignment="CENTER" />
-                <Text fx:id="NextBusN" layoutX="617.0" layoutY="362.0" scaleX="14.360849183219887" scaleY="10.865202504576049" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER"/>
+                <Text fx:id="NextBusN" layoutX="617.0" layoutY="362.0" scaleX="14.360849183219887" scaleY="10.865202504576049" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER" />
                 <Text id="NextBusN" layoutX="617.0" layoutY="781.0" scaleX="14.360849183219887" scaleY="10.865202504576049" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER" />
               </children>
             </AnchorPane>

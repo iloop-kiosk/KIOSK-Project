@@ -15,10 +15,12 @@ public class SubjectData {
 	private String dept;
 	private String room;
 
+	//授業名を返す
 	public String getSubjectName() {
 		return subjectName;
 	}
 
+	//授業名をセットする
 	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
 	}
@@ -49,16 +51,8 @@ public class SubjectData {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			
-			this.date = Calendar.getInstance();
-			
-			
-			
+			this.date = Calendar.getInstance();			
 		}
-		
-		
-		
-		
-
 	}
 
 	public int getExamtime() {
